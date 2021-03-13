@@ -44,6 +44,17 @@
             padding: 20px;
         }
         
+        .funnyText:hover {
+            border: 3px solid chocolate;
+            background-color: coral;
+        }
+        
+        .funnyText:active {
+            transform: translate(5%, 5%);
+            background-color: pink;
+            box-shadow: 5px 5px 5px gray;
+        }
+        
         .headingTitle {
             color: rgb(255, 15, 15);
             font-size: 200%;
@@ -869,6 +880,7 @@
                         return 'click vào copyright để dừng lại :v'
                     }
 
+
             }
         }
 
@@ -903,12 +915,14 @@
                 isClickOddFunnyElement = true;
             }
 
+            funnyTextElement.textContent = 'ựa 0.o'
         }
 
         Copyright.onclick = function(e) {
             if (isClickOddCopyright) {
                 funnyTextElement.onmousemove = function() {};
                 isClickOddCopyright = false;
+                Copyright.textContent = 'Nice :)))'
             } else {
                 funnyTextElement.onmousemove = function(e) {
                     let randomLeft = `${Math.floor(Math.random()*95)}vw`,
@@ -920,6 +934,7 @@
                         top: randomTop,
                     });
                     e.target.innerText = listTextFun(randomText);
+                    Copyright.textContent = `copyright © Hoàng Minh Tâm`
                 }
                 isClickOddCopyright = true;
             }
