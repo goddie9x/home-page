@@ -1,0 +1,999 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"></meta>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"></meta>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"></meta>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    <style>
+        html {
+            font-family: 'Quicksand', sans-serif;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        
+        .sidebar-container {
+            display: none;
+        }
+        
+        .page_body {
+            background-image: url("https://1.bp.blogspot.com/-gOxURpc82Kk/YDF58A52hJI/AAAAAAAAB7A/S_8ST8OtzRExfPkSDq8Mz5TCuMmm6741QCPcBGAsYHg/s0/hinh-nen-duong-bo-bien-Durdle%2BDoor-5k_anhdepHD_Com.jpg");
+            height: 250vh;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            margin-left: 0px;
+        }
+        
+        .post-header {
+            display: none;
+        }
+        
+        body {
+            background-color: gray;
+        }
+        
+        .centered-top-container.sticky {
+            background-color: rgba(24, 26, 27, 0.3);
+        }
+        
+        #ImYours {
+            display: none;
+        }
+        
+        .funnyText {
+            position: fixed;
+            background-color: red;
+            border-radius: 100px;
+            padding: 20px;
+        }
+        
+        .funnyText:hover {
+            border: 3px solid chocolate;
+            background-color: coral;
+        }
+        
+        .funnyText:active {
+            transform: translate(5%, 5%);
+            background-color: pink;
+            box-shadow: 5px 5px 5px gray;
+        }
+        
+        .funnyText::selection {
+            background-color: red;
+        }
+        
+        .headingTitle {
+            color: rgb(255, 15, 15);
+            font-size: 200%;
+            margin-top: 30px;
+            line-height: 30px;
+        }
+        
+        .post-title {
+            display: none;
+        }
+        
+        .post-body {
+            line-height: 1em;
+        }
+        
+        #page_body .FeaturedPost,
+        .Blog .blog-posts .post-outer-container {
+            background-color: transparent;
+        }
+        
+        a.timestamp-link,
+        a:active.timestamp-link,
+        a:visited.timestamp-link {
+            color: white;
+        }
+        
+        .khung {
+            border-top: 1px solid black;
+            border-right: 1px solid black;
+        }
+        
+        .khung-phai {
+            border-top: 1px solid black;
+            border-right: none;
+        }
+        
+        h3 {
+            color: white;
+        }
+        
+        .nhothoi {
+            margin: 0px;
+            line-height: 20 px;
+        }
+        
+        table {
+            border-radius: 20px;
+            border-spacing: 0;
+            background-image: linear-gradient(60deg, rgba(255, 246, 0, 0.5), rgba(94, 0, 207, 0.5)), url("https://1.bp.blogspot.com/-gOxURpc82Kk/YDF58A52hJI/AAAAAAAAB7A/S_8ST8OtzRExfPkSDq8Mz5TCuMmm6741QCPcBGAsYHg/s0/hinh-nen-duong-bo-bien-Durdle%2BDoor-5k_anhdepHD_Com.jpg");
+            height: 50vh;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            color: white;
+            font-size: 130%;
+            text-align: center;
+            line-height: 30px;
+        }
+        
+        .thang {
+            display: inline-block;
+            line-height: 10px;
+        }
+        
+        .buoi {
+            text-align: center;
+            width: 200px;
+            font-weight: 900;
+        }
+        
+        .thu {
+            width: 300px;
+        }
+        
+        .chon {
+            margin: 50px;
+            font-size: 180%;
+            line-height: 40px;
+        }
+        
+        .chon select {
+            font-size: 100%;
+            background-color: rgba(24, 26, 27, 0.3);
+            border-radius: 6px;
+            border: 1px solid rgba(24, 26, 27, 0.3);
+        }
+        
+        #thang4,
+        #thang5,
+        #thang6,
+        #thang7 {
+            display: none;
+        }
+        
+        .touch-icon {
+            margin: -12px 0px 0px -100px;
+        }
+        
+        .blogger {
+            display: none;
+        }
+        
+        .image-attribution {
+            display: none;
+        }
+        
+        .colorChangeBlack {
+            color: black;
+        }
+        
+        .post-bottom {
+            display: none;
+        }
+        
+        .chonThangFloating {
+            position: fixed;
+            bottom: 5vh;
+            right: 5vh;
+        }
+        
+        .buttonF {
+            background-color: red;
+            border-radius: 100px;
+            padding: 5px;
+        }
+        
+        .buttonF:hover {
+            border: 3px solid chocolate;
+            background-color: coral;
+        }
+        
+        .buttonF:active {
+            transform: translate(-51%);
+            background-color: pink;
+            box-shadow: 5px 5px 5px gray;
+        }
+        
+        .buttonF::selection {
+            background-color: red;
+        }
+        
+        .copyright {
+            width: fit-content;
+            position: relative;
+            left: 50%;
+            transform: translate(-50%);
+        }
+    </style>
+    <title>Thời khóa biểu</title>
+</head>
+
+<body>
+    <section class="headingSection">
+        <h2 class="headingTitle">
+            <p>Thời khóa biểu CNTT 1 k11 :</p>
+            <br>
+            <span>Lưu ý : từ 29/3-24/4 đi học GDQP
+                <br>Các môn cơ sở 3 đều học online đến 31/3
+            </span> </h2>
+
+        <div class="funnyText">
+            Đừng ấn vào đây :v
+        </div>
+    </section>
+
+
+    <div class="chon">
+        <div id="ImYours">
+            <audio autoplay="autoplay" loop controls="controls" src="https://docs.google.com/uc?export=download&id=0BzJxs0zRA0e7VTFrWng0dUs5OEE"></audio>
+            <small><br>ấn lại cái ô màu đỏ kia để đóng cái này :V</small>
+        </div>
+        <label for="chonthang">chọn tháng : </label>
+        <select id="chonthang" name="chonthang" onchange="showDiv('thang3', this),showDiv('thang4', this),showDiv('thang5', this),showDiv('thang6', this),showDiv('thang7',this)">
+            <option value="thang3">Tháng 3</option>
+            <option value="thang4">Tháng 4</option>
+            <option value="thang5">Tháng 5</option>
+            <option value="thang6">Tháng 6</option>
+            <option value="thang7">Tháng 7</option>
+        </select>
+    </div>
+
+    <section class="thang" id="thang3" style="border-radius: 10px;">
+        <table>
+            <tr class="nhothoi">
+                <td colspan="100%">
+                    <h2>Tháng 3</h2>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="buoi khung" rowspan="2">
+                    <h3>Buổi</h3>
+                </td>
+
+                <td class="thu khung">
+                    <h4>Thứ 2</h4>
+                </td>
+
+                <td class="thu khung">
+                    <h4>Thứ 4</h4>
+                </td>
+
+                <td class="thu khung">
+                    <h4>Thứ 6</h4>
+                </td>
+
+                <td class="thu khung-phai">
+                    <h4>Thứ 7</h4>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="thu khung">
+                    <h4>Sáng</h4>
+                </td>
+
+                <td class="thu khung">
+                    <h4>Sáng</h4>
+                </td>
+
+                <td class="thu khung">
+                    <h4>Sáng</h4>
+                </td>
+
+                <td class="thu khung-phai">
+                    <h4>Sáng</h4>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="buoi khung">
+                    <h3>Học phần</h3>
+                </td>
+
+                <td class="thu khung">
+                    <h5>Tiếng anh 2</h5>
+                </td>
+
+                <td class="thu khung">
+                    <h5>Toán rời rạc</h5>
+                </td>
+
+                <td class="thu khung">
+                    <h5>Triết học Mác - Lênin</h5>
+                </td>
+
+                <td class="thu khung-phai">
+                    <h5>Kiến trúc máy tính</h5>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="buoi khung">
+                    <h3>Phòng</h3>
+                </td>
+
+                <td class="thu khung">
+                    <h5>lớp 1:305(CS3)<br> lớp 2:306(CS3)
+                    </h5>
+                </td>
+
+                <td class="thu khung">
+                    <h5>T21
+                    </h5>
+                </td>
+
+                <td class="thu khung">
+                    <h5>CS3
+                    </h5>
+                </td>
+
+                <td class="thu khung-phai">
+                    <h5>601
+                    </h5>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="buoi khung">
+                    <h3>Thời gian </h3>
+                </td>
+
+                <td class="thu khung">
+                    <h5>01/03/21-27/03/21 </h5>
+                </td>
+
+                <td class="thu khung">
+                    <h5>01/03/21-29/05/21 </h5>
+                </td>
+
+                <td class="thu khung">
+                    <h5>01/03/21-27/03/21 </h5>
+                </td>
+
+                <td class="thu khung-phai">
+                    <h5>01/03/21-08/05/21 </h5>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <section class="thang" id="thang4" style="border-radius: 10px;">
+        <table>
+            <tr class="nhothoi">
+                <td colspan="100%">
+                    <h2>Tháng 4</h2>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="buoi khung" rowspan="2">
+                    <h3>Buổi</h3>
+                </td>
+
+                <td class="thu khung">
+                    <h4>Thứ 2</h4>
+                </td>
+
+                <td class="thu khung">
+                    <h4>Thứ 4</h4>
+                </td>
+
+                <td class="thu khung-phai">
+                    <h4>Thứ 7</h4>
+                </td>
+
+            </tr>
+
+            <tr>
+                <td class="thu khung">
+                    <h4>Sáng</h4>
+                </td>
+
+                <td class="thu khung">
+                    <h4>Sáng</h4>
+                </td>
+
+                <td class="thu khung-phai">
+                    <h4>Sáng</h4>
+                </td>
+
+            </tr>
+
+            <tr>
+                <td class="buoi khung">
+                    <h3>Học phần</h3>
+                </td>
+
+                <td class="thu khung">
+                    <h5>Tiếng anh 2</h5>
+                </td>
+
+                <td class="thu khung">
+                    <h5>Toán rời rạc</h5>
+                </td>
+
+                <td class="thu khung-phai">
+                    <h5>Kiến trúc máy tính
+                    </h5>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="buoi khung">
+                    <h3>Phòng</h3>
+                </td>
+
+                <td class="thu khung">
+                    <h5>lớp 1:305(CS3)<br> lớp 2:306(CS3)
+                    </h5>
+                </td>
+
+                <td class="thu khung">
+                    <h5>T21</h5>
+                </td>
+
+                <td class="thu khung-phai">
+                    <h5>601</h5>
+                </td>
+
+            </tr>
+
+            <tr>
+                <td class="buoi khung">
+                    <h3>Thời gian </h3>
+                </td>
+
+                <td class="thu khung">
+                    <h5>26/04/21-12/6/21 </h5>
+                </td>
+
+                <td class="thu khung">
+                    <h5>01/03/21-29/05/21 </h5>
+                </td>
+
+                <td class="thu khung-phai">
+                    <h5>01/03/21-08/05/21 </h5>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <section class="thang" id="thang5" style="border-radius: 10px;">
+        <table>
+            <tr class="nhothoi">
+                <td colspan="100%">
+                    <h2>Tháng 5</h2>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="buoi khung" rowspan="2">
+                    <h3>Buổi</h3>
+                </td>
+
+                <td class="thu khung">
+                    <h4>Thứ 2</h4>
+                </td>
+
+                <td class="thu khung">
+                    <h4>Thứ 3</h4>
+                </td>
+
+                <td class="thu khung">
+                    <h4>Thứ 4</h4>
+                </td>
+
+                <td class="thu khung">
+                    <h4>Thứ 5</h4>
+                </td>
+
+                <td class="thu khung">
+                    <h4>Thứ 6</h4>
+                </td>
+
+                <td class="thu khung-phai" colspan="2">
+                    <h4>Thứ 7</h4>
+                </td>
+
+            </tr>
+
+            <tr>
+                <td class="thu khung">
+                    <h4>Sáng</h4>
+                </td>
+
+                <td class="thu khung">
+                    <h4>Sáng</h4>
+                </td>
+
+                <td class="thu khung">
+                    <h4>Sáng</h4>
+                </td>
+
+                <td class="thu khung">
+                    <h4>Sáng</h4>
+                </td>
+
+                <td class="thu khung">
+                    <h4>Sáng</h4>
+                </td>
+
+                <td class="thu khung">
+                    <h4>Sáng</h4>
+                </td>
+
+                <td class="thu khung-phai">
+                    <h4>Chiều</h4>
+                </td>
+
+            </tr>
+
+            <tr>
+                <td class="buoi khung">
+                    <h3>Học phần</h3>
+                </td>
+
+                <td class="thu khung">
+                    <h5>Tiếng anh 2</h5>
+                </td>
+
+                <td class="thu khung">
+                    <h5>Cơ sở dữ liệu 1 </h5>
+                </td>
+
+                <td class="thu khung">
+                    <h5>Toán rời rạc </h5>
+                </td>
+
+                <td class="thu khung">
+                    <h5>Pháp luật đại cương </h5>
+                </td>
+
+                <td class="thu khung">
+                    <h5>Triết học Mác - Lênin</h5>
+                </td>
+
+                <td class="thu khung">
+                    <h5>Kiến trúc máy tính </h5>
+                </td>
+
+                <td class="thu khung-phai">
+                    <h5>GDTC : Bóng đá </h5>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="buoi khung">
+                    <h3>Phòng</h3>
+                </td>
+
+                <td class="thu khung">
+                    <h5>lớp 1:305(CS3)<br> lớp 2:306(CS3)</h5>
+                </td>
+
+                <td class="thu khung">
+                    <h5>T22 </h5>
+                </td>
+
+                <td class="thu khung">
+                    <h5>T21 </h5>
+                </td>
+
+                <td class="thu khung">
+                    <h5> 1001 </h5>
+                </td>
+
+                <td class="thu khung">
+                    <h5>CS3</h5>
+                </td>
+
+                <td class="thu khung">
+                    <h5>601</h5>
+                </td>
+
+                <td class="thu khung-phai">
+                    <h5>Sân trường :v</h5>
+                </td>
+
+            </tr>
+
+            <tr>
+                <td class="buoi khung">
+                    <h3>Thời gian </h3>
+                </td>
+
+                <td class="thu khung">
+                    <h5>26/04/21-12/6/21 </h5>
+                </td>
+
+                <td class="thu khung">
+                    <h5>24/05/21-26/06/21 </h5>
+                </td>
+
+                <td class="thu khung">
+                    <h5>01/03/21-29/05/21 </h5>
+                </td>
+
+                <td class="thu khung">
+                    <h5>03/05/21-05/06/21 </h5>
+                </td>
+
+                <td class="thu khung">
+                    <h5>03/05/21-29/05/21 </h5>
+                </td>
+
+                <td class="thu khung">
+                    <h5>01/03/21-08/05/21 </h5>
+                </td>
+
+                <td class="thu khung-phai">
+                    <h5>31/5/21-10/7/21
+                        <br>13 giờ - 15 giờ </h5>
+                </td>
+
+            </tr>
+        </table>
+    </section>
+
+    <section class="thang" id="thang6" style="border-radius: 10px;">
+        <table>
+            <tr class="nhothoi">
+                <td colspan="100%">
+                    <h2>Tháng 6</h2>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="buoi khung" rowspan="2">
+                    <h3>Buổi</h3>
+                </td>
+
+                <td class="thu khung">
+                    <h4>Thứ 2</h4>
+                </td>
+
+                <td class="thu khung" colspan="2">
+                    <h4>Thứ 3</h4>
+                </td>
+
+                <td class="thu khung">
+                    <h4>Thứ 5</h4>
+                </td>
+
+                <td class="thu khung-phai">
+                    <h4>Thứ 7</h4>
+                </td>
+
+            </tr>
+
+            <tr>
+                <td class="thu khung">
+                    <h4>Sáng</h4>
+                </td>
+
+                <td class="thu khung">
+                    <h4>Sáng</h4>
+                </td>
+
+                <td class="thu khung">
+                    <h4>Chiều</h4>
+                </td>
+
+                <td class="thu khung">
+                    <h4>Sáng</h4>
+                </td>
+
+                <td class="thu khung-phai">
+                    <h4>Chiều</h4>
+                </td>
+
+            </tr>
+
+            <tr>
+                <td class="buoi khung">
+                    <h3>Học phần</h3>
+                </td>
+
+                <td class="thu khung">
+                    <h5>Tiếng anh 2</h5>
+                </td>
+
+                <td class="thu khung">
+                    <h5>Cơ sở dữ liệu 1 </h5>
+                </td>
+
+                <td class="thu khung">
+                    <h5>GDTC : Bóng đá </h5>
+                </td>
+
+                <td class="thu khung">
+                    <h5>Pháp luật đại cương </h5>
+                </td>
+
+                <td class="thu khung-phai">
+                    <h5>GDTC : Bóng đá </h5>
+                </td>
+
+            </tr>
+
+            <tr>
+                <td class="buoi khung">
+                    <h3>Phòng</h3>
+                </td>
+
+                <td class="thu khung">
+                    <h5>lớp 1:305(CS3)<br> lớp 2:306(CS3)
+                    </h5>
+                </td>
+
+                <td class="thu khung">
+                    <h5>T22 </h5>
+                </td>
+
+                <td class="thu khung">
+                    <h5>Sân trường :v</h5>
+                </td>
+
+                <td class="thu khung">
+                    <h5> 1001 </h5>
+                </td>
+
+                <td class="thu khung-phai">
+                    <h5>Sân trường :v</h5>
+                </td>
+
+            </tr>
+
+            <tr>
+                <td class="buoi khung">
+                    <h3>Thời gian </h3>
+                </td>
+
+                <td class="thu khung">
+                    <h5>26/04/21-12/6/21 </h5>
+                </td>
+
+                <td class="thu khung">
+                    <h5>14/6/21-10/7/21
+                        <br>13 giờ - 15 giờ
+                    </h5>
+                </td>
+
+                <td class="thu khung">
+                    <h5>24/05/21-26/06/21 </h5>
+                </td>
+
+                <td class="thu khung-phai">
+                    <h5>03/05/21-05/06/21 </h5>
+                </td>
+
+                <td class="thu khung-phai">
+                    <h5>31/5/21-10/7/21
+                        <br>13 giờ - 15 giờ </h5>
+                </td>
+
+            </tr>
+        </table>
+    </section>
+
+    <section class="thang" id="thang7" style="border-radius: 10px;">
+        <table>
+            <tr class="nhothoi">
+                <td colspan="100%">
+                    <h2>Tháng 7</h2>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="buoi khung" rowspan="2">
+                    <h3>Buổi</h3>
+                </td>
+
+                <td class="thu khung">
+                    <h4>Thứ 3</h4>
+                </td>
+
+                <td class="thu khung-phai">
+                    <h4>Thứ 7</h4>
+                </td>
+
+            </tr>
+
+            <tr>
+                <td class="thu khung">
+                    <h4>Chiều</h4>
+                </td>
+
+                <td class="thu khung-phai">
+                    <h4>Chiều</h4>
+                </td>
+
+            </tr>
+
+            <tr>
+                <td class="buoi khung">
+                    <h3>Học phần</h3>
+                </td>
+
+                <td class="thu khung">
+                    <h5>GDTC : Bóng đá </h5>
+                </td>
+
+                <td class="thu khung-phai">
+                    <h5>GDTC : Bóng đá </h5>
+                </td>
+
+            </tr>
+
+            <tr>
+                <td class="buoi khung">
+                    <h3>Phòng</h3>
+                </td>
+
+                <td class="thu khung">
+                    <h5>Sân trường :v</h5>
+                </td>
+
+                <td class="thu khung-phai">
+                    <h5>Sân trường :v</h5>
+                </td>
+
+            </tr>
+
+            <tr>
+                <td class="buoi khung">
+                    <h3>Thời gian </h3>
+                </td>
+
+                <td class="thu khung">
+                    <h5>14/6/21-10/7/21
+                        <br>13 giờ - 15 giờ </h5>
+                </td>
+
+                <td class="thu khung-phai">
+                    <h5>31/5/21-10/7/21
+                        <br>13 giờ - 15 giờ </h5>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <section class="copyright">
+        <h3>copyright © Hoàng Minh Tâm</h3>
+    </section>
+
+    <script>
+        var H1Element = document.querySelector('.headingTitle'),
+            funnyTextElement = document.querySelector('.headingSection .funnyText'),
+            audioImYours = document.getElementById('ImYours'),
+            Copyright = document.querySelector('.copyright'),
+            isClickOddFunnyElement = true,
+            isClickOddCopyright = true;
+
+        var listTextFun = function(numberRandom) {
+            switch (numberRandom) {
+                case 0:
+                    {
+                        return 'đừng chạm vào đây *.*'
+                    }
+
+                case 1:
+                    {
+                        return 'á á á ><'
+                    }
+
+                case 2:
+                    {
+                        return 'đố anh bắt được iem :3'
+                    }
+
+                case 3:
+                    {
+                        return 'em đùa đấy đừng chạm vào em @@'
+                    }
+
+                case 4:
+                    {
+                        return 'đã bảo đừng động vào tôi rồi ~~'
+                    }
+
+                case 5:
+                    {
+                        return 'tránh ra nào $.$'
+                    }
+
+                case 6:
+                    {
+                        return 'ơ hay 0.o'
+                    }
+
+                case 7:
+                    {
+                        return 'né né né -.-'
+                    }
+
+                case 8:
+                    {
+                        return 'click vào copyright để dừng lại :v'
+                    }
+
+
+            }
+        }
+
+
+        setInterval(function() {
+            H1Element.classList.toggle('colorChangeBlack');
+        }, 300);
+
+        function showDiv(id, element) {
+            document.getElementById(id).style.display = element.value == id ? 'inline-block' : 'none';
+        }
+
+        funnyTextElement.onmousemove = function(e) {
+
+            let randomLeft = `${Math.floor(Math.random()*95)}vw`,
+                randomTop = `${Math.floor(Math.random()*95)}vh`,
+                randomText = Math.floor(Math.random() * 9);
+
+            Object.assign(e.target.style, {
+                left: randomLeft,
+                top: randomTop,
+            });
+            e.target.innerText = listTextFun(randomText);
+        }
+
+        funnyTextElement.onclick = function(e) {
+            if (isClickOddFunnyElement) {
+                audioImYours.style.display = 'block';
+                isClickOddFunnyElement = false;
+            } else {
+                audioImYours.style.display = 'none';
+                isClickOddFunnyElement = true;
+            }
+
+            funnyTextElement.textContent = 'ựa 0.o'
+        }
+
+        Copyright.onclick = function(e) {
+            if (isClickOddCopyright) {
+                funnyTextElement.onmousemove = function() {};
+                isClickOddCopyright = false;
+                Copyright.classList.add('buttonF');
+            } else {
+                funnyTextElement.onmousemove = function(e) {
+                    let randomLeft = `${Math.floor(Math.random()*95)}vw`,
+                        randomTop = `${Math.floor(Math.random()*95)}vh`,
+                        randomText = Math.floor(Math.random() * 9);
+
+                    Object.assign(e.target.style, {
+                        left: randomLeft,
+                        top: randomTop,
+                    });
+                    e.target.innerText = listTextFun(randomText);
+                }
+                isClickOddCopyright = true;
+                Copyright.classList.remove('buttonF');
+            }
+        }
+
+        window.addEventListener("scroll", function() {
+            elementStikyAdd = document.getElementById("chonthang");
+            if (window.scrollY > 382) {
+                elementStikyAdd.classList.add('chonThangFloating');
+            } else {
+                elementStikyAdd.classList.remove('chonThangFloating');
+            }
+        });
+    </script>
+</body>
+
+</html>
