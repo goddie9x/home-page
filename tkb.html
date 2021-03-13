@@ -7,14 +7,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
     <style>
-        /*------------------------DEFAULT------------------------*/
-        
         html {
             font-family: 'Quicksand', sans-serif;
             box-sizing: border-box;
             text-align: center;
         }
-        /*------------------------USEABLE------------------------*/
         
         .sidebar-container {
             display: none;
@@ -29,8 +26,16 @@
             margin-left: 0px;
         }
         
+        .post-header {
+            display: none;
+        }
+        
         body {
             background-color: gray;
+        }
+        
+        .centered-top-container.sticky {
+            background-color: rgba(24, 26, 27, 0.3);
         }
         
         #ImYours {
@@ -55,6 +60,10 @@
             box-shadow: 5px 5px 5px gray;
         }
         
+        .funnyText::selection {
+            background-color: red;
+        }
+        
         .headingTitle {
             color: rgb(255, 15, 15);
             font-size: 200%;
@@ -63,11 +72,7 @@
         }
         
         .post-title {
-            color: violet;
-        }
-        
-        .post-timestamp {
-            color: black;
+            display: none;
         }
         
         .post-body {
@@ -141,7 +146,9 @@
         
         .chon select {
             font-size: 100%;
-            background-color: black;
+            background-color: rgba(24, 26, 27, 0.3);
+            border-radius: 6px;
+            border: 1px solid rgba(24, 26, 27, 0.3);
         }
         
         #thang4,
@@ -166,12 +173,50 @@
         .colorChangeBlack {
             color: black;
         }
+        
+        .post-bottom {
+            display: none;
+        }
+        
+        .chonThangFloating {
+            position: fixed;
+            bottom: 5vh;
+            right: 5vh;
+        }
+        
+        .buttonF {
+            background-color: red;
+            border-radius: 100px;
+            padding: 5px;
+        }
+        
+        .buttonF:hover {
+            border: 3px solid chocolate;
+            background-color: coral;
+        }
+        
+        .buttonF:active {
+            transform: translate(-51%);
+            background-color: pink;
+            box-shadow: 5px 5px 5px gray;
+        }
+        
+        .buttonF::selection {
+            background-color: red;
+        }
+        
+        .copyright {
+            width: fit-content;
+            position: relative;
+            left: 50%;
+            transform: translate(-50%);
+        }
     </style>
     <title>Thời khóa biểu</title>
 </head>
 
 <body>
-    <section>
+    <section class="headingSection">
         <h2 class="headingTitle">
             <p>Thời khóa biểu CNTT 1 k11 :</p>
             <br>
@@ -827,7 +872,7 @@
 
     <script>
         var H1Element = document.querySelector('.headingTitle'),
-            funnyTextElement = document.querySelector('.funnyText'),
+            funnyTextElement = document.querySelector('.headingSection .funnyText'),
             audioImYours = document.getElementById('ImYours'),
             Copyright = document.querySelector('.copyright'),
             isClickOddFunnyElement = true,
@@ -922,7 +967,7 @@
             if (isClickOddCopyright) {
                 funnyTextElement.onmousemove = function() {};
                 isClickOddCopyright = false;
-                Copyright.textContent = 'Nice :)))'
+                Copyright.classList.add('buttonF');
             } else {
                 funnyTextElement.onmousemove = function(e) {
                     let randomLeft = `${Math.floor(Math.random()*95)}vw`,
@@ -934,13 +979,21 @@
                         top: randomTop,
                     });
                     e.target.innerText = listTextFun(randomText);
-                    Copyright.textContent = `copyright © Hoàng Minh Tâm`
                 }
                 isClickOddCopyright = true;
+                Copyright.classList.remove('buttonF');
             }
         }
+
+        window.addEventListener("scroll", function() {
+            elementStikyAdd = document.getElementById("chonthang");
+            if (window.scrollY > 382) {
+                elementStikyAdd.classList.add('chonThangFloating');
+            } else {
+                elementStikyAdd.classList.remove('chonThangFloating');
+            }
+        });
     </script>
-    
 </body>
 
 </html>
