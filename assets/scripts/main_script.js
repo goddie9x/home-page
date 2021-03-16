@@ -147,26 +147,31 @@ function ShowDivSelect(object) {
 
 }
 
+//need style display=none hard code on html
+
 function ShowHideDiv(object) {
-    let isHidden = true;
-    let elementActive = document.querySelector(object.elementActive);
-    let elementShowHide = document.querySelector(object.elementShowHide);
+    let elementActive = document.querySelector(object.elementActive),
+        elementShowHide = document.querySelector(object.elementShowHide);
+
     elementActive.onclick = function() {
-        if (isHidden) {
+        if (elementShowHide.style.display == 'none') {
             elementShowHide.style.display = 'inline-block';
-            isHidden = false;
+
         } else {
             elementShowHide.style.display = 'none';
-            isHidden = true;
         }
     }
 }
 
-function onBlurHideDiv(elementActive, elementHide) {
-    let elementActiveBlur = document.querySelector(elementActive),
-        onBlurElement = elementHide ? (document.querySelector(elementHide)) : elementActiveBlur;
+function clickOutsideClose(elementName, exceptionElement) {
+    let elementClickOutHide = document.querySelector(elementName),
+        elememtException = document.querySelector(exceptionElement);
 
-    elementActiveBlur.onblur = function() {
-        onBlurElement.style.display = 'none';
-    }
+    document.addEventListener('click', function(event) {
+        isClickInside = (exceptionElement) ? (elementClickOutHide.contains(event.target) || elememtException.contains(event.target)) : elementClickOutHide.contains(event.target);
+
+        if (!isClickInside) {
+            elementClickOutHide.style.display = 'none';
+        }
+    });
 }

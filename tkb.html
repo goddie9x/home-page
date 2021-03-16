@@ -26,7 +26,7 @@
         </div>
     </section>
 
-    <section class="notificat-expanded">
+    <section class="notificat-expanded" style="display: none;">
         <div class="main-notif">
             <h2 class="title-notiv">Thông báo</h2>
             <div class="notif-inside">Từ 29/3-24/4 đi học GDQP</div>
@@ -39,10 +39,11 @@
     <section class="headingSection">
         <h2 class="headingTitle">
             <p>Thời khóa biểu CNTT 1 K11 :</p>
+        </h2>
 
-            <div class="funnyText">
-                Đừng ấn vào đây :v
-            </div>
+        <div class="funnyText">
+            Đừng ấn vào đây :v
+        </div>
     </section>
 
 
@@ -697,12 +698,11 @@
             elementActive: '.notification',
             elementShowHide: '.notificat-expanded'
         })
-
-        onBlurHideDiv('.notificat-expanded');
-
         scrollLocalAddclass('#chonthang', 'chonThangFloating', 300);
 
         scrollLocalAddclass('.header', 'floating-top', 100);
+
+        clickOutsideClose('.notificat-expanded', '.notification')
     </script>
 </body>
 

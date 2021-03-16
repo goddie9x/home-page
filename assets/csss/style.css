@@ -108,6 +108,9 @@ h3 {
     width: 100vw;
     display: inline-block;
     background-color: rgba(24, 26, 27, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
     padding: 10px;
     z-index: 30;
 }
@@ -125,9 +128,8 @@ h3 {
 
 .logo {
     border-radius: 5px;
+    max-height: 30px;
     max-width: 60px;
-    position: absolute;
-    left: 25px;
 }
 
 .notification-icon {
@@ -150,11 +152,10 @@ h3 {
 /*----------------------NOTIFICATION----------------*/
 
 .notificat-expanded {
-    display: none;
     position: fixed;
     top: 90px;
     right: 30px;
-    max-width: 50vw;
+    width: 50vw;
     max-height: 70vh;
     border-radius: 5px;
     background-color: rgba(0, 0, 0, 0.9);
@@ -171,10 +172,11 @@ h3 {
 
 .title-notiv {
     margin-top: 0px !important;
+    margin-bottom: 20px;
 }
 
 .notif-inside {
-    margin: 5px 0px;
+    margin: 10px 0px;
 }
 
 .notif-inside:hover {
@@ -264,6 +266,12 @@ table {
 
 .blogger {
     display: none;
+}
+
+.centered-top-placeholder {
+    margin-top: 40px;
+    color: #ffbe88;
+    z-index: 500;
 }
 
 .centered-top-container.sticky {
