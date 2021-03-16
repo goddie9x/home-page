@@ -1,11 +1,14 @@
+/*--------------------DEFAULT-----------------*/
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
 html {
     font-family: 'Quicksand', sans-serif;
     box-sizing: border-box;
     text-align: center;
-}
-
-.sidebar-container {
-    display: none;
 }
 
 .page_body {
@@ -17,69 +20,12 @@ html {
     margin-left: 0px;
 }
 
-.post-header {
-    display: none;
-}
-
 body {
     background-color: gray;
 }
 
-.centered-top-container.sticky {
-    background-color: rgba(24, 26, 27, 0.3);
-}
 
-#ImYours {
-    display: none;
-}
-
-.funnyText {
-    position: fixed;
-    background-color: red;
-    border-radius: 100px;
-    padding: 20px;
-}
-
-.funnyText:hover {
-    border: 3px solid chocolate;
-    background-color: coral;
-}
-
-.funnyText:active {
-    transform: translate(5%, 5%);
-    background-color: pink;
-    box-shadow: 5px 5px 5px gray;
-}
-
-.funnyText::selection {
-    background-color: red;
-}
-
-.headingTitle {
-    color: rgb(255, 15, 15);
-    font-size: 200%;
-    margin-top: 30px;
-    line-height: 30px;
-}
-
-.post-title {
-    display: none;
-}
-
-.post-body {
-    line-height: 1em;
-}
-
-#page_body .FeaturedPost,
-.Blog .blog-posts .post-outer-container {
-    background-color: transparent;
-}
-
-a.timestamp-link,
-a:active.timestamp-link,
-a:visited.timestamp-link {
-    color: white;
-}
+/*--------------------------USABLE------------------------*/
 
 .khung {
     border-top: 1px solid black;
@@ -98,20 +44,6 @@ h3 {
 .nhothoi {
     margin: 0px;
     line-height: 20 px;
-}
-
-table {
-    border-radius: 20px;
-    border-spacing: 0;
-    background-image: linear-gradient(60deg, rgba(255, 246, 0, 0.5), rgba(94, 0, 207, 0.5)), url("https://1.bp.blogspot.com/-gOxURpc82Kk/YDF58A52hJI/AAAAAAAAB7A/S_8ST8OtzRExfPkSDq8Mz5TCuMmm6741QCPcBGAsYHg/s0/hinh-nen-duong-bo-bien-Durdle%2BDoor-5k_anhdepHD_Com.jpg");
-    height: 50vh;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    color: white;
-    font-size: 130%;
-    text-align: center;
-    line-height: 30px;
 }
 
 .thang {
@@ -142,39 +74,6 @@ table {
     border: 1px solid rgba(24, 26, 27, 0.3);
 }
 
-#thang4,
-#thang5,
-#thang6,
-#thang7 {
-    display: none;
-}
-
-.touch-icon {
-    margin: -12px 0px 0px -100px;
-}
-
-.blogger {
-    display: none;
-}
-
-.image-attribution {
-    display: none;
-}
-
-.colorChangeBlack {
-    color: black;
-}
-
-.post-bottom {
-    display: none;
-}
-
-.chonThangFloating {
-    position: fixed;
-    bottom: 5vh;
-    right: 5vh;
-}
-
 .buttonF {
     background-color: red;
     border-radius: 100px;
@@ -196,9 +95,217 @@ table {
     background-color: red;
 }
 
+.clear-fix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+/*------------------HEADER SECTION-------------------*/
+
+.header {
+    width: 100vw;
+    display: inline-block;
+    background-color: rgba(24, 26, 27, 0.3);
+    padding: 10px;
+    z-index: 30;
+}
+
+.floating-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+.logo {
+    border-radius: 5px;
+    max-width: 60px;
+    position: absolute;
+    left: 25px;
+}
+
+.notification-icon {
+    height: 30px;
+    width: 30px;
+}
+
+.notification-icon:active {
+    transform: scale(1.2, 1.2);
+}
+
+.headingTitle {
+    color: rgb(255, 15, 15);
+    font-size: 200%;
+    margin-top: 30px;
+    line-height: 30px;
+}
+
+
+/*----------------------NOTIFICATION----------------*/
+
+.notificat-expanded {
+    display: none;
+    position: fixed;
+    top: 90px;
+    right: 30px;
+    max-width: 50vw;
+    max-height: 70vh;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 10px;
+    color: #fff;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.main-notif {
+    text-align: left;
+    padding: 0px 10px;
+}
+
+.title-notiv {
+    margin-top: 0px !important;
+}
+
+.notif-inside {
+    margin: 5px 0px;
+}
+
+.notif-inside:hover {
+    background-color: rgba(99, 92, 92, 0.9);
+    border-radius: 3px;
+}
+
+
+/*--------------------BODY TABBLE-------------------*/
+
+table {
+    border-radius: 20px;
+    border-spacing: 0;
+    background-image: linear-gradient(60deg, rgba(255, 246, 0, 0.5), rgba(94, 0, 207, 0.5)), url("https://1.bp.blogspot.com/-gOxURpc82Kk/YDF58A52hJI/AAAAAAAAB7A/S_8ST8OtzRExfPkSDq8Mz5TCuMmm6741QCPcBGAsYHg/s0/hinh-nen-duong-bo-bien-Durdle%2BDoor-5k_anhdepHD_Com.jpg");
+    height: 50vh;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    font-size: 130%;
+    text-align: center;
+    line-height: 30px;
+}
+
+#ImYours {
+    display: none;
+}
+
+.funnyText {
+    position: fixed;
+    background-color: red;
+    border-radius: 100px;
+    padding: 20px;
+    z-index: 1000;
+}
+
+.funnyText:hover {
+    border: 3px solid chocolate;
+    background-color: coral;
+}
+
+.funnyText:active {
+    transform: translate(5%, 5%);
+    background-color: pink;
+    box-shadow: 5px 5px 5px gray;
+}
+
+.funnyText::selection {
+    background-color: red;
+}
+
+#thang4,
+#thang5,
+#thang6,
+#thang7 {
+    display: none;
+}
+
+.post-bottom {
+    display: none;
+}
+
+.chonThangFloating {
+    position: fixed;
+    bottom: 5vh;
+    right: 5vh;
+}
+
+
+/*------------------FOOTER--------------------*/
+
 .copyright {
+    margin-top: 30px;
     width: fit-content;
     position: relative;
     left: 50%;
     transform: translate(-50%);
+    z-index: 1;
+}
+
+
+/*-------------------ONBLOG-----------------------*/
+
+.comments {
+    display: none;
+}
+
+.blogger {
+    display: none;
+}
+
+.centered-top-container.sticky {
+    background-color: rgba(24, 26, 27, 0.3);
+    display: none;
+}
+
+.post-header {
+    display: none;
+}
+
+.post-title {
+    display: none;
+}
+
+.sidebar-container {
+    display: none;
+}
+
+#page_body .FeaturedPost,
+.Blog .blog-posts .post-outer-container {
+    background-color: transparent;
+}
+
+a.timestamp-link,
+a:active.timestamp-link,
+a:visited.timestamp-link {
+    color: white;
+}
+
+.touch-icon {
+    margin: -12px 0px 0px -100px;
+}
+
+.image-attribution {
+    display: none;
+}
+
+.colorChangeBlack {
+    color: black;
+}
+
+.post-body {
+    line-height: 1em;
 }

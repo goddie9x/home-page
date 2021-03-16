@@ -11,17 +11,38 @@
 </head>
 
 <body>
+    <section class="header">
+        <div class="main-nav">
+            <div class="logo-link">
+                <a href="https://www.facebook.com/goddie9x" target="blank" class="logo-link-fb">
+                    <img class="logo" src="https://scontent.fhan2-5.fna.fbcdn.net/v/t1.0-9/122500488_1890159827803102_8829078543065742069_o.jpg?_nc_cat=107&ccb=1-3&_nc_sid=174925&_nc_ohc=0m2uI7K7Za0AX_ZGh1K&_nc_ht=scontent.fhan2-5.fna&oh=6eac6e9bb9769f81ae8d353adb5cfd9a&oe=607545C6"
+                        alt="logo">
+                </a>
+            </div>
+            <div class="menu-nav"></div>
+            <div class="notification">
+                <img class="notification-icon" src="./assets/images/notification.png" alt="notification-icon">
+            </div>
+        </div>
+    </section>
+
+    <section class="notificat-expanded">
+        <div class="main-notif">
+            <h2 class="title-notiv">Thông báo</h2>
+            <div class="notif-inside">Từ 29/3-24/4 đi học GDQP</div>
+            <div class="notif-inside">Các môn cơ sở 3 đều học online đến 31/3</div>
+        </div>
+    </section>
+
+    <div class="clear-fix"></div>
+
     <section class="headingSection">
         <h2 class="headingTitle">
-            <p>Thời khóa biểu CNTT 1 k11 :</p>
-            <br>
-            <span>Lưu ý : từ 29/3-24/4 đi học GDQP
-                <br>Các môn cơ sở 3 đều học online đến 31/3
-            </span> </h2>
+            <p>Thời khóa biểu CNTT 1 K11 :</p>
 
-        <div class="funnyText">
-            Đừng ấn vào đây :v
-        </div>
+            <div class="funnyText">
+                Đừng ấn vào đây :v
+            </div>
     </section>
 
 
@@ -30,13 +51,13 @@
             <audio autoplay="autoplay" loop controls="controls" src="https://docs.google.com/uc?export=download&id=0BzJxs0zRA0e7VTFrWng0dUs5OEE"></audio>
             <small><br>ấn lại cái ô màu đỏ kia để đóng cái này :V</small>
         </div>
-        <label for="chonthang">chọn tháng : </label>
-        <select id="chonthang" name="chonthang" onchange="showDiv('thang3', this),showDiv('thang4', this),showDiv('thang5', this),showDiv('thang6', this),showDiv('thang7',this)">
-            <option value="thang3">Tháng 3</option>
-            <option value="thang4">Tháng 4</option>
-            <option value="thang5">Tháng 5</option>
-            <option value="thang6">Tháng 6</option>
-            <option value="thang7">Tháng 7</option>
+        <label for="chonthang">Chọn tháng : </label>
+        <select id="chonthang" name="chonthang">
+            <option value="0">Tháng 3</option>
+            <option value="1">Tháng 4</option>
+            <option value="2">Tháng 5</option>
+            <option value="3">Tháng 6</option>
+            <option value="4">Tháng 7</option>
         </select>
     </div>
 
@@ -662,10 +683,27 @@
     </section>
 
     <section class="copyright">
-        <h3>copyright © Hoàng Minh Tâm</h3>
+        <h3>Copyright © Hoàng Minh Tâm</h3>
     </section>
 
     <script src="./assets/scripts/main_script.js"></script>
+    <script>
+        ShowDivSelect({
+            elementActive: '#chonthang',
+            elementShow: ['#thang3', '#thang4', '#thang5', '#thang6', '#thang7']
+        });
+
+        ShowHideDiv({
+            elementActive: '.notification',
+            elementShowHide: '.notificat-expanded'
+        })
+
+        onBlurHideDiv('.notificat-expanded');
+
+        scrollLocalAddclass('#chonthang', 'chonThangFloating', 300);
+
+        scrollLocalAddclass('.header', 'floating-top', 100);
+    </script>
 </body>
 
 </html>
