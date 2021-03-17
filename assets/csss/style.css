@@ -123,7 +123,7 @@ h3 {
 
 .main-nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .logo {
@@ -133,6 +133,7 @@ h3 {
 }
 
 .notification-icon {
+    margin-right: 5vw;
     height: 30px;
     width: 30px;
 }
@@ -163,6 +164,7 @@ h3 {
     color: #fff;
     overflow: auto;
     overflow-x: hidden;
+    z-index: 999;
 }
 
 .main-notif {
@@ -184,6 +186,39 @@ h3 {
     border-radius: 3px;
 }
 
+.slide-mode {
+    display: inline-flex;
+    width: 80vw;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.video-play {
+    border-radius: 5px;
+    max-width: 30vw;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
+
+.BLOG_video_class {
+    border-radius: 15px;
+    border: none;
+}
+
 
 /*--------------------BODY TABBLE-------------------*/
 
@@ -201,9 +236,10 @@ table {
     line-height: 30px;
 }
 
-#ImYours {
+
+/* #ImYours {
     display: none;
-}
+} */
 
 .funnyText {
     position: fixed;
@@ -211,6 +247,7 @@ table {
     border-radius: 100px;
     padding: 20px;
     z-index: 1000;
+    cursor: pointer;
 }
 
 .funnyText:hover {
@@ -245,6 +282,21 @@ table {
     right: 5vh;
 }
 
+.idol-of-idol {
+    line-height: 200%;
+    margin-bottom: 20px;
+    font-size: 200%;
+    font-weight: 200%;
+}
+
+.video-slide {
+    color: coral;
+    margin-top: 30px;
+    position: absolute;
+    left: 0;
+    /*left:-10vw;bottom:-60vh; on blogspot*/
+}
+
 
 /*------------------FOOTER--------------------*/
 
@@ -255,6 +307,7 @@ table {
     left: 50%;
     transform: translate(-50%);
     z-index: 1;
+    cursor: pointer;
 }
 
 
@@ -316,4 +369,13 @@ a:visited.timestamp-link {
 
 .post-body {
     line-height: 1em;
+}
+
+
+/*-----------------------RESPONSIVE-------------------*/
+
+@media only screen and (max-width: 800px) {
+    .video-slide {
+        bottom: -100vh;
+    }
 }

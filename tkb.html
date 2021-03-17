@@ -21,7 +21,7 @@
             </div>
             <div class="menu-nav"></div>
             <div class="notification">
-                <img class="notification-icon" src="https://docs.google.com/uc?export=download&id=1TAEOE3SbjhDqduB7clFY-HFCMXjot4G5" alt="notification-icon">
+                <img class="notification-icon" src="https://1.bp.blogspot.com/-3Om_fkRDpPk/YFGhTNK4q2I/AAAAAAAAB9Q/HVGqsfOH2FUnzJfHwcGhyZ7iKkjaD4xfgCLcBGAsYHQ/s513/notification.png" alt="notification-icon">
             </div>
         </div>
     </section>
@@ -41,17 +41,18 @@
             <p>Thời khóa biểu CNTT 1 K11 :</p>
         </h2>
 
-        <div class="funnyText">
+        <div class="funnyText noselect ">
             Đừng ấn vào đây :v
         </div>
     </section>
 
 
     <div class="chon">
-        <div id="ImYours">
-            <audio autoplay="autoplay" loop controls="controls" src="https://docs.google.com/uc?export=download&id=0BzJxs0zRA0e7VTFrWng0dUs5OEE"></audio>
-            <small><br>ấn lại cái ô màu đỏ kia để đóng cái này :V</small>
+        <div id="ImYours" style="display: none;">
+            <audio autoplay="autoplay" loop controls="controls" src="https://docs.google.com/uc?export=download&id=0BzJxs0zRA0e7VTFrWng0dUs5OEE" style="z-index: 20 !important;"></audio>
+            <small><br>ấn lại cái ô màu đỏ kia để đóng cái này :V<br></small>
         </div>
+        <div class="clear-fix"></div>
         <label for="chonthang">Chọn tháng : </label>
         <select id="chonthang" name="chonthang">
             <option value="0">Tháng 3</option>
@@ -683,7 +684,15 @@
         </table>
     </section>
 
-    <section class="copyright">
+    <section class="video-slide" style="display: none;">
+        <div class="idol-of-idol">Chúc các bạn học tập tốt !<br>Dưới đây là vài vi déo chuyền động lực :</div>
+        <div class="slide-mode">
+            <iframe class="BLOG_video_class" allowfullscreen="" youtube-src-id="eUYTRHhN2Io" width="320" height="266" src="https://www.youtube.com/embed/eUYTRHhN2Io"></iframe><iframe class="BLOG_video_class" allowfullscreen="" youtube-src-id="WY6DlUHPHAk"
+                width="320" height="266" src="https://www.youtube.com/embed/WY6DlUHPHAk"></iframe>
+        </div>
+    </section>
+
+    <section class="copyright noselect ">
         <h3>Copyright © Hoàng Minh Tâm</h3>
     </section>
 
@@ -694,15 +703,36 @@
             elementShow: ['#thang3', '#thang4', '#thang5', '#thang6', '#thang7']
         });
 
-        ShowHideDiv({
+        ShowHideChangeDiv({
             elementActive: '.notification',
-            elementShowHide: '.notificat-expanded'
-        })
+            ArrayElementShowHide: ['.notificat-expanded']
+        });
+
+        ShowHideChangeDiv({
+            elementActive: '.headingSection .funnyText',
+            ArrayElementShowHide: ['#ImYours', '.video-slide'],
+            elementNeedChangeHTML: '.headingSection .funnyText',
+            HTMLchange: '<p>ựa 0.o</p>'
+        });
+
+        elementMoveWhenMouseMove({
+            funnyTextElement: '.funnyText',
+            arrayTextRandom: ['đừng chạm vào đây *.*',
+                'á á á ><',
+                'đố anh bắt được iem :3',
+                'em đùa đấy đừng chạm vào em @@',
+                'đã bảo đừng động vào tôi rồi ~~',
+                'tránh ra nào $.$',
+                'ơ hay 0.o', 'né né né -.-',
+                'click vào copyright để dừng lại :v'
+            ],
+        });
+
         scrollLocalAddclass('#chonthang', 'chonThangFloating', 300);
 
         scrollLocalAddclass('.header', 'floating-top', 100);
 
-        clickOutsideClose('.notificat-expanded', '.notification')
+        clickOutsideClose('.notificat-expanded', '.notification');
     </script>
 </body>
 
