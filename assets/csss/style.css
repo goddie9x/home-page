@@ -37,6 +37,10 @@ body {
     border-right: none;
 }
 
+.link-notif {
+    margin-left: 10px;
+}
+
 h3 {
     color: white;
 }
@@ -99,6 +103,10 @@ h3 {
     content: "";
     clear: both;
     display: table;
+}
+
+a {
+    text-decoration: none;
 }
 
 
@@ -170,11 +178,18 @@ h3 {
 .main-notif {
     text-align: left;
     padding: 0px 10px;
+    margin-bottom: 20px;
 }
 
 .title-notiv {
     margin-top: 0px !important;
     margin-bottom: 20px;
+}
+
+.main-notif--link {
+    padding-top: 10px;
+    border-top: 2px dotted brown;
+    text-align: left;
 }
 
 .notif-inside {
