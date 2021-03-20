@@ -342,7 +342,7 @@ table {
     z-index: 500;
 }
 
-.centered-top-container.sticky {
+.centered-top-container {
     background-color: rgba(24, 26, 27, 0.3);
     display: none;
 }
